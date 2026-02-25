@@ -1,12 +1,22 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import About from './components/About'
+import Footer from './components/Footer'
+import Team from './components/Team'
+import Testimonials from './components/Testimonials'
+import Form from './components/Form'
 
 const App = () => {
   return (
-    <div className='bg-secondary bg-[url("https://assets.prebuiltui.com/images/components/hero-section/hero-background-image.png")] bg-cover bg-center bg-no-repeat relative'>
+    <div>
         <Navbar />
         <Hero   />
+        <About />
+        <Team />
+        <Testimonials />
+        <Form />
+        <Footer />
     </div>
   )
 }
