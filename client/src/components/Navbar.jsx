@@ -27,7 +27,7 @@ const Navbar = () => {
             {/* Desktop Menu */}
             <ul className="hidden sm:flex items-center gap-8">
                 <li className='relative group'>
-                    <button className='flex items-center gap-1 cursor-pointer'>Opportunity <FiChevronDown className="text-lg text-[#ffa843]" /></button>
+                    <button className='flex items-center gap-1 cursor-pointer'>Opportunities <FiChevronDown className="text-lg text-[#ffa843]" /></button>
 
                      {/* Dropdown Menu */}
                    <ul className={`opacity-0 invisible group-hover:opacity-100 
