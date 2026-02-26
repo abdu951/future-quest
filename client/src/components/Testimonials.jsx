@@ -71,8 +71,8 @@ const Testimonials = () => {
                 <div className="max-w-6xl mx-auto">
 
                     <div className="text-center mb-8">
-                        <div className="inline-block bg-neutral-100 border border-neutral-400 rounded-full px-4 py-1 mb-3">
-                            <span className="text-xs text-neutral-600">Loved by clients</span>
+                        <div className="inline-block bg-neutral-100 border border-[#ffa843] rounded-full px-4 py-1 mb-3">
+                            <span className="text-xs text-[#ffa843]">Loved by clients</span>
                         </div>
                         <h2 className="text-4xl md:text-5xl font-medium text-neutral-900 mb-4">
                             What people are saying
