@@ -1,24 +1,23 @@
-import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+
+import EducationOpportunity from './pages/EducationOpportunity'
+import Home from './pages/Home'
+import WorkOpportunity from './pages/WorkOpportunity'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
 import Footer from './components/Footer'
-import Team from './components/Team'
-import Testimonials from './components/Testimonials'
-import Form from './components/Form'
-import Contact from './components/Contact'
 
 const App = () => {
   return (
     <div>
-        <Navbar />
-        <Hero   />
-        <About />
-        <Team />
-        <Testimonials />
-        <Contact />
-        
-        <Footer />
+    <Navbar />
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/education" element={<EducationOpportunity />} />
+        <Route path="/work" element={<WorkOpportunity />} />
+      </Routes>
+    </div>
+    <Footer />
     </div>
   )
 }
