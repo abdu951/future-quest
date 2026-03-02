@@ -2,13 +2,12 @@ import React from 'react'
 import HeroLayout from '../components/HeroLayout'
 import bgImage from '../assets/oip22.jpg'
 import Card from '../components/Card'
-import Cardd from '../components/Cardd'
 import { useAppContext } from '../context/AppContext'
 
 const WorkOpportunity = () => {
 
-    const {opportunities} = useAppContext()
-
+   /** const {opportunities} = useAppContext()
+    console.log(opportunities)**/
 
   return (
     <div>
@@ -23,10 +22,11 @@ const WorkOpportunity = () => {
         </div>
 
         <div className='flex items-center justify-between m-30'>
-            {opportunities.map((opportunity) => {
-                return <Cardd key={opportunity._id} {...opportunity} />
-            })}
+            <Card />
+            <Card />
+            <Card />
         </div>
+        
     </div>
   )
 }

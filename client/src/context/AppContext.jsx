@@ -53,7 +53,7 @@ export const AppContextProvider = ({children}) => {
     // fetch all products
     const fetchOpportunities = async () => {
         try {
-           const {data} = await axios.get('/api/opportunities/get-all')
+           const {data} = await axios.get('/api/opportunities/get_all')
            if (data.success) {
             setOpportunities(data.opportunities);
            } else {
@@ -121,9 +121,7 @@ export const AppContextProvider = ({children}) => {
  
 
     useEffect(() => {
-        fetchUser()
-        fetchSeller()
-        fetchProducts()
+        fetchOpportunities()
     }, [])
 
     useEffect(() => {
