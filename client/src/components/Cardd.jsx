@@ -14,7 +14,6 @@
                 Learn More
             </button>
             <a href={opportunity.form_link} target="_blank" rel="noopener noreferrer"></a>
-            <p>{opportunity.category}</p>
         </div>
     );
  }

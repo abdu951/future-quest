@@ -18,7 +18,7 @@ const EducationOpportunity = () => {
       try {
         const { data } = await axios.get(
           "http://localhost:8000/api/opportunities?category=education"
-        );
+        )
 
         setOpportunities(data);
       } catch (err) {
@@ -45,10 +45,10 @@ const EducationOpportunity = () => {
             buttonText="Book Now"
             bgImage={bgImage}
         />
-        <div className='flex items-center justify-between m-30'>
-            {opportunities.map((opportunity, index) => (
-                <Cardd key={index} opportunity={opportunity} />
-            ))}
+        <div className="grid md:grid-cols-3 gap-6 p-10 m-auto">
+             {opportunities.map((opportunity) => (
+               <Cardd key={opportunity.id} opportunity={opportunity} />
+              ))}
         </div>
     </div>
   )
