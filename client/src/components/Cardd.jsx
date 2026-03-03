@@ -10,9 +10,11 @@
             <p className="text-zinc-400 text-sm/6 mt-2 ml-2 mb-2">
                 {opportunity.description}
             </p>
+            <a href={`/opportunities/${opportunity.id}`}>
             <button type="button" className="bg-[#ffa843] hover:bg-indigo-700 transition cursor-pointer mt-4 mb-3 ml-2 px-6 py-2 font-medium rounded-md text-white text-sm">
                 Learn More
             </button>
+            </a>
             <a href={opportunity.form_link} target="_blank" rel="noopener noreferrer"></a>
         </div>
     );
