@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import bgImage from "../assets/oip6.jpg";
 import HeroLayout from "../components/HeroLayout";
+import toast from "react-hot-toast";
 
 function Admin() {
   const [form, setForm] = useState({
@@ -24,7 +25,7 @@ function Admin() {
     e.preventDefault();
 
     if (!image) {
-      alert("Please select an image");
+      toast.error("Please select an image");
       return;
     }
 
@@ -35,15 +36,6 @@ function Admin() {
     formData.append("form_link", form.form_link);
     formData.append("image", image);
 
-  const reset = () => {
-    setForm({
-      title: "",
-      description: "",
-      category: "",
-      form_link: "",
-     })
-     setImage(null)
-  }  
     try {
       const res = await axios.post(
         "http://localhost:8000/api/opportunities/add",
@@ -56,7 +48,7 @@ function Admin() {
       );
 
       // ✅ Correct success message
-      alert(res.data.message);
+      toast.success(data.message);
 
     } catch (error) {
       console.log(error.response?.data);
@@ -65,7 +57,7 @@ function Admin() {
       if (error.response?.data?.detail) {
         alert(error.response.data.detail);
       } else {
-        alert("Something went wrong");
+        toast.error("Something went wrong");
       }
     }
   };
@@ -92,7 +84,7 @@ function Admin() {
         className="border p-2"
       />
 
-      <button onClick={() => reset()} type="submit" className="bg-[#ffa843] hover:bg-indigo-700 transition cursor-pointer mt-4 mb-3 ml-2 px-6 py-2 font-medium rounded-md text-white text-sm">Create</button>
+      <button type="submit" className="bg-[#ffa843] hover:bg-indigo-700 transition cursor-pointer mt-4 mb-3 ml-2 px-6 py-2 font-medium rounded-md text-white text-sm">Create</button>
     </form>
     </div>
   );
