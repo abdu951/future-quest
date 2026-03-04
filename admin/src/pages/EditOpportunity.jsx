@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
 import toast from "react-hot-toast";
-
+import { IoArrowBack } from "react-icons/io5";
 const EditOpportunity = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
-  const { axios } = useAppContext();
+  const { axios, navigate } = useAppContext();
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -109,7 +108,14 @@ const EditOpportunity = () => {
 
   return (
     <div className="flex justify-center p-8 bg-gray-100 min-h-screen">
-      <div className="w-full max-w-2xl bg-white rounded-xl shadow-md p-8">
+
+      <div onClick={() => navigate("/")} className="flex gap-2 cursor-pointer text-blue-600">
+                  <IoArrowBack size={20} />
+                  <p>Back to list</p>
+                  
+              </div>
+
+      <div className="w-full max-w-2xl bg-white rounded-xl shadow-md p-8 mt-10">
 
         <h2 className="text-2xl font-semibold mb-6">
           Update Opportunity

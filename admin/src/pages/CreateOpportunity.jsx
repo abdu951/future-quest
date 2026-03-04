@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useAppContext } from "../context/AppContext";
 import toast from "react-hot-toast";
+import { IoArrowBack } from "react-icons/io5";
 
 const CreateOpportunity = () => {
-  const { axios } = useAppContext();
+  const { axios, navigate } = useAppContext(); 
 
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
@@ -79,8 +80,14 @@ const CreateOpportunity = () => {
 
   return (
     <div className="flex justify-center p-8 bg-gray-100 min-h-screen">
+        
+        <div onClick={() => navigate("/")} className="flex gap-2 cursor-pointer text-blue-600">
+            <IoArrowBack size={20} />
+            <p>Back to list</p>
+            
+        </div>
 
-      <div className="w-full max-w-2xl bg-white rounded-xl shadow-md p-8">
+      <div className="w-full max-w-2xl bg-white rounded-xl shadow-md p-8 mt-10">
 
         <h2 className="text-2xl font-semibold mb-6">
           Create New Opportunity

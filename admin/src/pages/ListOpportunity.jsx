@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
 import toast from "react-hot-toast";
 
 const ListOpportunity = () => {
-  const { axios } = useAppContext();
-  const navigate = useNavigate();
+  const { axios, navigate } = useAppContext();
 
   const [opportunities, setOpportunities] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -63,7 +61,7 @@ const ListOpportunity = () => {
 
   return (
     <div className="p-8 bg-gray-100 min-h-screen">
-      <div className="bg-white shadow-md rounded-xl p-6">
+      <div className="bg-white shadow-md rounded-xl p-6 mt-6">
 
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
@@ -72,7 +70,7 @@ const ListOpportunity = () => {
           </h2>
 
           <button
-            onClick={() => navigate("/admin/opportunities/create")}
+            onClick={() => navigate("/create")}
             className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
           >
             + Add New
