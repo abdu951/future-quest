@@ -195,7 +195,7 @@ const CreateOpportunity = () => {
               Form Link
             </label>
             <input
-              type="text"
+              type="url"
               name="form_link"
               required
               value={formDataState.form_link}

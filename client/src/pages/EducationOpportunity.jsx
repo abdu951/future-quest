@@ -1,8 +1,8 @@
 import React from 'react'
 import HeroLayout from '../components/HeroLayout'
 import bgImage from '../assets/oip6.jpg'
-import axios from "axios";
 import { useEffect, useState } from "react";
+import { useAppContext } from "../context/AppContext";
 import OpportunityCard from '../components/OpportunityCard';
 
 const EducationOpportunity = () => {
@@ -10,13 +10,14 @@ const EducationOpportunity = () => {
     const [opportunities, setOpportunities] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+    const { axios } = useAppContext();
 
 
     useEffect(() => {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:8000/api/opportunities?category=education"
+          "/api/opportunities?category=education"
         )
 
         setOpportunities(data);
@@ -38,13 +39,13 @@ const EducationOpportunity = () => {
   return (
     <div>
         <HeroLayout
-            title="Explore The World with "
-            spanText="Future Quest"
-            description="lorem ipsum dolor amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidun dolore."
+            title="Opportunities for "
+            spanText="Education"
+            description="lorem ipsum dolor amet, consetetur sadipscing elitr sed diam nonumy."
             buttonText="Book Now"
             bgImage={bgImage}
         />
-        <div className="grid md:grid-cols-3 gap-6 p-10 m-auto">
+        <div className="grid md:grid-cols-3 gap-y-16 ml-24 py-28">
              {opportunities.map((opportunity) => (
                <OpportunityCard key={opportunity.id} opportunity={opportunity} />
               ))}

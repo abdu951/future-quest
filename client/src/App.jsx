@@ -1,31 +1,27 @@
 import { Route, Routes } from 'react-router-dom'
+import { Toaster } from 'react-hot-toast'
 
 import EducationOpportunity from './pages/EducationOpportunity'
 import Home from './pages/Home'
 import WorkOpportunity from './pages/WorkOpportunity'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import Detail from './pages/Detail'
-import Admin from './pages/Admin'
-import EditOpportunity from './pages/EditOpportunity'
-import Edit from './pages/Edit'
+import DetailOpportunity from './pages/DetailOpportunity'
 
 const App = () => {
   return (
     <div>
-    <Navbar />          
+      <Toaster />
+     <Navbar />   
     <div>                                
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/education" element={<EducationOpportunity />} />
-        <Route path="/work" element={<WorkOpportunity />} />
-       {/** Route path="/opportunities/:id" element={<Detail />} /> **/}
-        <Route path="/admin" element={<Admin />} />
-        {/* <Route path="/opportunities/:id" element={<EditOpportunity />} /> */}
-        <Route path="/opportunities/:id" element={<Edit />} />  
+        <Route path="/opportunities/education" element={<EducationOpportunity />} />
+        <Route path="/opportunities/work" element={<WorkOpportunity />} />
+        <Route path="/opportunities/:category/:id" element={<DetailOpportunity />} />  
       </Routes>
     </div>
-    <Footer />
+   <Footer />
     </div>
   )
 }

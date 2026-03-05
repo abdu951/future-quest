@@ -103,7 +103,9 @@ const ListOpportunity = () => {
                     className="border-b hover:bg-gray-50 transition"
                   >
                     <td className="py-3 px-6 font-medium">
-                      {item.title}
+                      {item.title.length > 20
+                        ? item.title.slice(0, 20) + "..."
+                        : item.title}
                     </td>
 
                     <td className="py-3 px-6 text-gray-600">

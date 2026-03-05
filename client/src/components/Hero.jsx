@@ -9,7 +9,7 @@ const Hero = () => {
             <div>
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">Explore The World with <span className='text-[#ffa843]'>Future Quest</span></h1>
                 <p className="mx-auto max-w-2xl dark:text-body-color-dark mb-6 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">lorem ipsum dolor amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidun dolore.</p>
-                <button type="button" className="cursor-pointer w-50 py-4 text-md font-bold text-white rounded-full bg-[#ffa843]">Book Now</button>
+                <button type="button" className="cursor-pointer w-50 py-4 text-md font-bold text-white rounded-full bg-[#ffa843] hover:bg-[#ffa743c0]">Book Now</button>
             </div>
             
         </div>

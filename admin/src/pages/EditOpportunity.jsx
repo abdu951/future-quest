@@ -85,7 +85,7 @@ const EditOpportunity = () => {
       });
 
       toast.success("Opportunity updated successfully");
-      navigate("/admin");
+      navigate("/");
 
     } catch (error) {
       if (error.response) {
@@ -214,7 +214,7 @@ const EditOpportunity = () => {
 
             <button
               type="button"
-              onClick={() => navigate("/admin")}
+              onClick={() => navigate("/")}
               className="flex-1 py-3 rounded-lg border border-gray-300 hover:bg-gray-100"
             >
               Cancel

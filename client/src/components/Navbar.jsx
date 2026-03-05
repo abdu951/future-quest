@@ -13,14 +13,14 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      window.scrollY >= 80 ? setSticky(true) : setSticky(false)
+      window.scrollY >= 50 ? setSticky(true) : setSticky(false)
     })
   },[])
 
     return (
         <nav className={`fixed top-0 left-0 w-full z-50 max-h-18 flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 text-white transition-all ${sticky ? ' bg-white/60 dark:bg-black/60 backdrop-blur-md shadow-md' : 'bg-transparent'}`}>
 
-            <a href="https://prebuiltui.com">
+            <a href="/">
                 <img src={logo} alt="logo" className='w-55 h-45'/>
             </a>
 
@@ -35,11 +35,11 @@ const Navbar = () => {
                          >
             
                    <li className="px-4 py-2 hover:text-[#ffa843]">
-                    <a href="/education">Education</a>
+                    <a href="/opportunities/education">Education</a>
                    </li>
 
                    <li className="px-4 py-2 hover:text-[#ffa843]">
-                     <a href="/work">Work</a>
+                     <a href="/opportunities/work">Work</a>
                    </li>
 
                    </ul>
@@ -56,7 +56,7 @@ const Navbar = () => {
                     </svg>
                     <button className="absolute -top-2 -right-3 text-xs text-white bg-[#ffa843] w-[18px] h-[18px] rounded-full">0</button>
                 </div>
-                <button className="cursor-pointer px-8 py-2 bg-[#ffa843] hover:bg-[#ffa74385] transition text-white rounded-full">
+                <button className="cursor-pointer px-8 py-2 bg-[#ffa843] hover:bg-[#ffa743c0] transition text-white rounded-full">
                     Login
                 </button>
             </div>

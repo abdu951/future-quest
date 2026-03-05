@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-40 pb-20">
+    <div className="pt-60">
         <div className="text-center">
         <p className="text-lg text-[#ffa843] font-medium pb-2">Contact Us</p>
         <h1 className="text-4xl font-semibold text-slate-700 pb-4">Get in touch with us</h1>
@@ -108,7 +108,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="flex items-center gap-2 bg-[#ffa843] text-white px-6 py-3 hover:opacity-90 transition rounded-full"
+            className="flex items-center gap-2 bg-[#ffa843] hover:bg-[#ffa743c0] text-white px-6 py-3 hover:opacity-90 transition rounded-full"
           >
             Submit Now
             <img src={arrow_icon} alt="" className="w-4" />

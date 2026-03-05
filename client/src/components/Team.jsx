@@ -4,7 +4,7 @@ const Team = () => {
   return (
      <div className='pb-40 pt-10'>
             
-            <h1 className="text-3xl font-medium text-slate-800 text-center">Meet Our Team</h1>
+            <h1 className="text-3xl text-slate-700 font-semibold text-center">Meet Our Team</h1>
             <p className="text-slate-500 text-center">The people behind the product, passionate about what they do.</p>
             <div className="flex flex-wrap items-center justify-center gap-6 mt-12">
                 <div className="max-w-80 bg-black text-white rounded-2xl">

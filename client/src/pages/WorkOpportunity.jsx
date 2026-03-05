@@ -1,9 +1,8 @@
 import React from 'react'
 import HeroLayout from '../components/HeroLayout'
-import bgImage from '../assets/oip22.jpg'
-import { useAppContext } from '../context/AppContext'
+import bgImage from '../assets/slider2.png'
 import { useEffect, useState } from 'react'
-import axios from "axios";
+import { useAppContext } from "../context/AppContext";
 import OpportunityCard from '../components/OpportunityCard'
 
 const WorkOpportunity = () => {
@@ -11,13 +10,14 @@ const WorkOpportunity = () => {
   const [opportunities, setOpportunities] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const { axios } = useAppContext();
   
   
       useEffect(() => {
       const fetchData = async () => {
         try {
           const { data } = await axios.get(
-            "http://localhost:8000/api/opportunities?category=work"
+            "/api/opportunities?category=work"
           )
   
           setOpportunities(data);
@@ -39,13 +39,13 @@ const WorkOpportunity = () => {
     return (
       <div>
           <HeroLayout
-              title="Explore The World with "
-              spanText="Future Quest"
-              description="lorem ipsum dolor amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidun dolore."
+              title="Opportunities for "
+              spanText="Work"
+              description="lorem ipsum dolor amet, consetetur sadipscing elitr sed diam nonumy."
               buttonText="Book Now"
               bgImage={bgImage}
           />
-          <div className="grid md:grid-cols-3 gap-6 p-10 m-auto">
+          <div className="grid md:grid-cols-3 gap-y-16 ml-24 py-28">
                {opportunities.map((opportunity) => (
                  <OpportunityCard key={opportunity.id} opportunity={opportunity} />
                 ))}

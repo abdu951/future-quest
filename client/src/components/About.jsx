@@ -29,12 +29,9 @@ const About = () => {
                 <div className="text-sm text-slate-600 max-w-lg">
                     <h1 className="text-xl uppercase font-semibold text-slate-700">What we do?</h1>
                     <div className="w-24 h-[3px] rounded-full bg-gradient-to-r from-[#ffa843] to-[#fffbd9]"></div>
-                    <p className="mt-8">PrebuiltUI helps you build faster by transforming your design vision into fully functional,
-                        production-ready UI components. </p>
-                    <p className="mt-4">Whether you're launching a SaaS app, landing page, or dashboard, our collection of Tailwind
-                        CSS components is crafted to boost your development speed and improve user experience.</p>
-                    <p className="mt-4">From UI design systems to automation-ready layouts, PrebuiltUI empowers you to build
-                        beautifully and scale effortlessly.</p>
+                    <p className="mt-8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt dicta quasi sed? Quaerat facilis adipisci, porro eum ducimus,</p>
+                    <p className="mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt dicta quasi sed? Quaerat facilis adipisci, porro eum ducimus, necessitatibus mollitia modi sequi odit ex ullam </p>
+                    <p className="mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt dicta quasi sed? Quaerat facilis adipisci, porro eum ducimus.</p>
                     <a href="#" className="flex items-center w-max gap-2 mt-8 hover:-translate-y-0.5 transition bg-gradient-to-r from-[#ffa843] to-[#ffa74385] py-3 px-8 rounded-full text-white">
                         <span>Read more</span>
                         <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
