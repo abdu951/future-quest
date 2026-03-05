@@ -1,6 +1,6 @@
  import React from 'react'
  
- const Cardd = ({opportunity}) => {
+ const OpportunityCard = ({opportunity}) => {
    return (
         <div className="p-4 bg-white border border-gray-200 hover:-translate-y-1 transition duration-300 rounded-lg shadow shadow-black/10 max-w-80">
             <img className="rounded-md max-h-40 w-full object-cover" src={opportunity.image_url} alt={opportunity.title} />
@@ -20,7 +20,7 @@
     );
  }
  
- export default Cardd
+ export default OpportunityCard;
 
 
 

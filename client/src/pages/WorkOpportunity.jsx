@@ -1,16 +1,16 @@
 import React from 'react'
 import HeroLayout from '../components/HeroLayout'
 import bgImage from '../assets/oip22.jpg'
-import Cardd from '../components/Cardd'
 import { useAppContext } from '../context/AppContext'
 import { useEffect, useState } from 'react'
 import axios from "axios";
+import OpportunityCard from '../components/OpportunityCard'
 
 const WorkOpportunity = () => {
 
   const [opportunities, setOpportunities] = useState([]);
-      const [loading, setLoading] = useState(true);
-      const [error, setError] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
   
   
       useEffect(() => {
@@ -47,7 +47,7 @@ const WorkOpportunity = () => {
           />
           <div className="grid md:grid-cols-3 gap-6 p-10 m-auto">
                {opportunities.map((opportunity) => (
-                 <Cardd key={opportunity.id} opportunity={opportunity} />
+                 <OpportunityCard key={opportunity.id} opportunity={opportunity} />
                 ))}
           </div>
       </div>

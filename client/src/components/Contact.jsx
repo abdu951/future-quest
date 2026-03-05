@@ -4,7 +4,6 @@ import mail_icon from "../assets/envelope.svg";
 import phone_icon from "../assets/telephone.svg";
 import location_icon from "../assets/geo-alt-fill.svg";
 import arrow_icon from "../assets/white-arrow.png";
-import phone from "../assets/telephone-fill.svg";
 
 const Contact = () => {
   const [result, setResult] = React.useState("");

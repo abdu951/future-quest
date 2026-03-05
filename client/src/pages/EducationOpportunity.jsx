@@ -1,10 +1,9 @@
 import React from 'react'
 import HeroLayout from '../components/HeroLayout'
 import bgImage from '../assets/oip6.jpg'
-import Cardd from '../components/Cardd'
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import OpportunityCard from '../components/OpportunityCard';
 
 const EducationOpportunity = () => {
 
@@ -47,7 +46,7 @@ const EducationOpportunity = () => {
         />
         <div className="grid md:grid-cols-3 gap-6 p-10 m-auto">
              {opportunities.map((opportunity) => (
-               <Cardd key={opportunity.id} opportunity={opportunity} />
+               <OpportunityCard key={opportunity.id} opportunity={opportunity} />
               ))}
         </div>
     </div>
