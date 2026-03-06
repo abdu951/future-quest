@@ -24,6 +24,8 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5174",
         "http://localhost:5173",
+        "https://future-quest-j9fw.vercel.app",
+        "https://future-quest-admin.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
