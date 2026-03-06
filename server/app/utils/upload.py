@@ -1,5 +1,6 @@
 from cloudinary.uploader import upload
 from fastapi import UploadFile, HTTPException
+from app.core.config import settings
 
 
 
