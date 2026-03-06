@@ -1,5 +1,4 @@
-import { assets, footerLinks } from "../assets/assets";
-import logo from "../assets/logo-4.png"
+import React from "react";
 
 const Footer = () => {
 

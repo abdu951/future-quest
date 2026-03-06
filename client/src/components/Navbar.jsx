@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import logo from "../assets/logo-4.png"
+import logo from "../assets/logo.png"
 import { FiChevronDown } from "react-icons/fi";
 
 
