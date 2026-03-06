@@ -121,7 +121,6 @@ export const AppContextProvider = ({children}) => {
  
 
     useEffect(() => {
-        fetchOpportunities()
     }, [])
 
     useEffect(() => {
