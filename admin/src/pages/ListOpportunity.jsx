@@ -13,7 +13,7 @@ const ListOpportunity = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get("/api/opportunities");
+        const { data } = await axios.get("/api/opportunities/");
         setOpportunities(data);
       } catch (error) {
         toast.error("Failed to load opportunities");
@@ -36,7 +36,7 @@ const ListOpportunity = () => {
     try {
       setDeletingId(id);
 
-      await axios.delete(`/api/opportunities/delete/${id}`);
+      await axios.delete(`/api/opportunities/${id}`);
 
       // Optimistic UI update
       setOpportunities((prev) =>

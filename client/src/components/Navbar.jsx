@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import logo from "../assets/logo-4.png"
-import chevron from "../assets/chevron-down.svg"
-import { assets } from "../assets/assets"
 import { FiChevronDown } from "react-icons/fi";
 
 

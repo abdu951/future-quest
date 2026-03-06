@@ -50,7 +50,7 @@ const CreateOpportunity = () => {
       formData.append("form_link", formDataState.form_link);
       formData.append("image", image);
 
-      await axios.post("/api/opportunities/add", formData, {
+      await axios.post("/api/opportunities/", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

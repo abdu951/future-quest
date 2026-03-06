@@ -80,7 +80,7 @@ const EditOpportunity = () => {
         formData.append("image", image);
       }
 
-      await axios.patch(`/api/opportunities/update/${id}`, formData, {
+      await axios.patch(`/api/opportunities/${id}`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
@@ -180,13 +180,16 @@ const EditOpportunity = () => {
               onChange={handleChange}
               className="w-full border rounded-lg px-4 py-2"
             />
-            <input
-              type="text"
-              name="category"
-              value={formDataState.category}
-              onChange={handleChange}
-              className="w-full border rounded-lg px-4 py-2"
-            />
+            <select
+               name="category" 
+               type="text" 
+               value={formDataState.category}
+               onChange={handleChange}
+               className="w-full border rounded-lg px-4 py-2">
+               <option value="" disabled>Select Category</option>
+               <option value="education">Education</option>
+               <option value="work">Work</option>
+               </select>
           </div>
 
           {/* Form Link */}
