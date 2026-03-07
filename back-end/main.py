@@ -8,7 +8,7 @@ from app.api.routes.opportunity_routes import router as opportunity_router
 
 
 @asynccontextmanager
-async def lifespan(_app: FastAPI):
+async def lifespan(app: FastAPI):
     # Startup
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
