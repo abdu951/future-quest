@@ -3,6 +3,8 @@ import cloudinary
 
 
 
+
+
 class Settings(BaseSettings):
     DATABASE_URL: str
 
@@ -18,6 +20,7 @@ class Settings(BaseSettings):
 
 settings = Settings()
 print(settings.DATABASE_URL)
+print(settings.CLOUDINARY_API_KEY)
 
 
 cloudinary.config(
@@ -26,3 +29,11 @@ cloudinary.config(
     api_secret=settings.CLOUDINARY_API_SECRET,
     secure=True,
 )
+
+
+
+
+
+
+
+
