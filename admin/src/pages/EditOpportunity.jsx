@@ -179,6 +179,7 @@ const EditOpportunity = () => {
 
           {/* Country + Category */}
           <div className="grid md:grid-cols-2 gap-4">
+            <div>
             <label className="block text-sm font-medium mb-2">
               Country
             </label>
@@ -189,6 +190,9 @@ const EditOpportunity = () => {
               onChange={handleChange}
               className="w-full border rounded-lg px-4 py-2"
             />
+            </div>
+
+            <div>
             <label className="block text-sm font-medium mb-2">
               Category
             </label>
@@ -202,6 +206,8 @@ const EditOpportunity = () => {
                <option value="education">Education</option>
                <option value="work">Work</option>
                </select>
+               </div>
+               
           </div>
 
           {/* Form Link */}
