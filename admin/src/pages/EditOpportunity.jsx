@@ -194,7 +194,7 @@ const EditOpportunity = () => {
 
           {/* Form Link */}
           <input
-            type="url"
+            type="text"
             name="form_link"
             value={formDataState.form_link}
             onChange={handleChange}
