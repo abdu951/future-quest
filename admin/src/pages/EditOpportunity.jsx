@@ -178,10 +178,10 @@ const EditOpportunity = () => {
           />
 
           {/* Country + Category */}
-          <label className="block text-sm font-medium mb-2">
+          <div className="grid md:grid-cols-2 gap-4">
+            <label className="block text-sm font-medium mb-2">
               Country
             </label>
-          <div className="grid md:grid-cols-2 gap-4">
             <input
               type="text"
               name="country"
