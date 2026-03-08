@@ -154,6 +154,9 @@ const EditOpportunity = () => {
           </div>
 
           {/* Title */}
+          <label className="block text-sm font-medium mb-2">
+              Title
+            </label>
           <input
             type="text"
             name="title"
@@ -163,6 +166,9 @@ const EditOpportunity = () => {
           />
 
           {/* Description */}
+          <label className="block text-sm font-medium mb-2">
+              Description
+            </label>
           <textarea
             name="description"
             rows="4"
@@ -172,6 +178,9 @@ const EditOpportunity = () => {
           />
 
           {/* Country + Category */}
+          <label className="block text-sm font-medium mb-2">
+              Country
+            </label>
           <div className="grid md:grid-cols-2 gap-4">
             <input
               type="text"
@@ -180,6 +189,9 @@ const EditOpportunity = () => {
               onChange={handleChange}
               className="w-full border rounded-lg px-4 py-2"
             />
+            <label className="block text-sm font-medium mb-2">
+              Category
+            </label>
             <select
                name="category" 
                type="text" 
@@ -193,8 +205,11 @@ const EditOpportunity = () => {
           </div>
 
           {/* Form Link */}
+          <label className="block text-sm font-medium mb-2">
+              Form Link
+            </label>
           <input
-            type="text"
+            type="url"
             name="form_link"
             value={formDataState.form_link}
             onChange={handleChange}
