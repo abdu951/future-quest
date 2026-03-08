@@ -53,3 +53,16 @@ class OpportunityRepository:
 
         result = await db.execute(stmt)
         return result.scalars().first()
+
+
+    @staticmethod
+    async def find_duplicate_by_id(db, id, title, description):
+
+        stmt = select(Opportunity.id).where(
+            func.lower(func.trim(Opportunity.title)) == title.strip().lower(),
+            func.lower(func.trim(Opportunity.description)) == description.strip().lower(),
+            Opportunity.id != id
+        )
+
+        result = await db.execute(stmt)
+        return result.scalars().first() 

@@ -90,14 +90,14 @@ class OpportunityService:
          if image.content_type not in allowed_types:
             raise HTTPException(400, "Invalid image type")
 
-        existing = await OpportunityRepository.find_duplicate(
-            db, title, description
+        existing = await OpportunityRepository.find_duplicate_by_id(
+            db, id, title, description
         )
 
         if existing:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
-                detail="Opportunity already exists"
+                detail="Another opportunity with the same title and description already exists."
             )    
 
         if image:
