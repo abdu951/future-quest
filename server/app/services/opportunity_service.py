@@ -72,6 +72,33 @@ class OpportunityService:
 
         if not opportunity:
             raise HTTPException(404, "Opportunity not found")
+        
+        if category:
+            category = category.strip().lower()
+
+        url_adapter = TypeAdapter(HttpUrl)
+
+        if form_link: 
+         try:
+            validated_url = url_adapter.validate_python(form_link)
+         except ValidationError:
+            raise HTTPException(400, "Invalid form link URL")
+
+        allowed_types = {"image/jpeg", "image/png", "image/webp"}
+        
+        if image:
+         if image.content_type not in allowed_types:
+            raise HTTPException(400, "Invalid image type")
+
+        existing = await OpportunityRepository.find_duplicate(
+            db, title, description
+        )
+
+        if existing:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Opportunity already exists"
+            )    
 
         if image:
             opportunity.image_url = upload_image(image)
@@ -89,7 +116,7 @@ class OpportunityService:
             opportunity.category = category
 
         if form_link:
-            opportunity.form_link = form_link
+            opportunity.form_link = str(validated_url)
 
         return await OpportunityRepository.update(db, opportunity)
 
