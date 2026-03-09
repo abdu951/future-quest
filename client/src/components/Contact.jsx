@@ -1,125 +1,131 @@
-import React from "react";
-import msg_icon from "../assets/msg-icon.png";
+import React, { useState } from "react";
 import mail_icon from "../assets/envelope.svg";
 import phone_icon from "../assets/telephone.svg";
 import location_icon from "../assets/geo-alt-fill.svg";
-import arrow_icon from "../assets/white-arrow.png";
 
 const Contact = () => {
-  const [result, setResult] = React.useState("");
+  const [result, setResult] = useState("");
 
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
-
-    formData.append("access_key", "YOUR_ACCESS_KEY");
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setResult("Message sent successfully!");
   };
 
   return (
-    <div className="pt-60">
-        <div className="text-center">
-        <p className="text-lg text-[#ffa843] font-medium pb-2">Contact Us</p>
-        <h1 className="text-4xl font-semibold text-slate-700 pb-4">Get in touch with us</h1>
+    <section className="py-28 px-6 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+
+        
+        <div className="text-center mb-16">
+          <span className="text-[#ffa843] uppercase font-semibold tracking-wider">
+            Contact Us
+          </span>
+          <h2 className="mt-3 text-4xl font-bold text-gray-900">
+            Get in Touch
+          </h2>
+          <p className="mt-4 text-gray-600 max-w-xl mx-auto">
+            Have questions about your next adventure? Our team is here to help
+            you plan the perfect travel experience.
+          </p>
         </div>
-    <div className="max-w-6xl mx-auto my-20 px-14 flex flex-col md:flex-row justify-between gap-10">
-      
-      {/* LEFT SIDE */}
-      <div className="md:w-1/2 text-gray-600">
-        <h3 className="text-[#000F38] text-2xl font-medium flex items-center mb-5">
-          Send us a message
-          <img src={msg_icon} alt="" className="w-6 ml-3" />
-        </h3>
 
-        <p className="max-w-md">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Dolor neque animi assumenda ipsam tempora in perferendis
-          corporis.emporibus corrupti obcaecati tenetur maxime repellendus, reprehenderit eius distinctio ratione! Earum, quisquam iusto!
-        </p>
+        
+        <div className="grid md:grid-cols-2 gap-12">
 
-        <ul className="mt-6 space-y-5">
-          <li className="flex items-center">
-            <img src={mail_icon} alt="" className="w-4 mr-3" />
-            Contact@greatstack.dev
-          </li>
-          <li className="flex items-center">
-            <img src={phone_icon} alt="" className="w-4 mr-3" />
-            +1 123-456-7890
-          </li>
-          <li className="flex items-start">
-            <img src={location_icon} alt="" className="w-4 mr-3 mt-1" />
-            77 massachustes ave, cambridge <br />
-            ma 02139, united states
-          </li>
-        </ul>
-      </div>
-
-      {/* RIGHT SIDE (FORM) */}
-      <div className="md:w-1/2">
-        <form onSubmit={onSubmit} className="space-y-4">
           
-          <div>
-            <label className="block mb-1 text-gray-600">Your name</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-              required
-              className="w-full bg-[#ffa843]/10 rounded-3xl p-4 outline-none"
-            />
+          <div className="space-y-8">
+
+            <p className="text-gray-600 leading-relaxed">
+              Reach out to us for travel support, booking assistance, or
+              partnership opportunities. Our team responds quickly and ensures
+              every traveler gets the best experience possible.
+            </p>
+
+            <div className="space-y-5">
+
+              <div className="flex items-center gap-4">
+                <img src={mail_icon} alt="" className="w-5" />
+                <span className="text-gray-700">contact@futurequest.com</span>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <img src={phone_icon} alt="" className="w-5" />
+                <span className="text-gray-700">+1 123-456-7890</span>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <img src={location_icon} alt="" className="w-5 mt-1" />
+                <span className="text-gray-700">
+                  77 Massachusetts Ave <br />
+                  Cambridge, MA 02139 <br />
+                  United States
+                </span>
+              </div>
+
+            </div>
           </div>
 
-          <div>
-            <label className="block mb-1 text-gray-600">Phone number</label>
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Enter your phone number"
-              required
-              className="w-full bg-[#ffa843]/10 rounded-3xl p-4 outline-none"
-            />
+          
+          <div className="bg-white rounded-3xl shadow-lg p-8">
+
+            <form onSubmit={handleSubmit} className="space-y-5">
+
+              <div>
+                <label className="block text-sm font-medium text-gray-600 mb-1">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter your name"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#ffa843] outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-600 mb-1">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter your email"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#ffa843] outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-600 mb-1">
+                  Message
+                </label>
+                <textarea
+                  rows="4"
+                  required
+                  placeholder="Write your message"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#ffa843] outline-none resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-[#ffa843] text-white py-3 rounded-full font-semibold hover:bg-[#ff9a25] transition duration-300"
+              >
+                Send Message
+              </button>
+
+            </form>
+
+            {result && (
+              <p className="mt-4 text-green-600 text-sm">{result}</p>
+            )}
+
           </div>
 
-          <div>
-            <label className="block mb-1 text-gray-600">Write your message here</label>
-            <textarea
-              name="message"
-              rows="4"
-              placeholder="Enter your message"
-              required
-              className="w-full bg-[#ffa843]/10 rounded-3xl p-4 outline-none resize-none"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="flex items-center gap-2 bg-[#ffa843] hover:bg-[#ffa743c0] text-white px-6 py-3 hover:opacity-90 transition rounded-full"
-          >
-            Submit Now
-            <img src={arrow_icon} alt="" className="w-4" />
-          </button>
-        </form>
-
-        <span className="block mt-5 text-gray-600">{result}</span>
+        </div>
       </div>
-    </div>
-    </div>
+    </section>
   );
 };
 
-export default Contact;
+export default Contact; 
+

@@ -71,7 +71,7 @@ const DetailOpportunity = () => {
       />
 
       {/* Title */}
-      <h1 className="text-3xl text-slate-700 font-semibold mt-6">
+      <h1 className="text-3xl text-gray-900 font-semibold mt-6">
         {opportunity.title}
       </h1>
 
@@ -87,7 +87,7 @@ const DetailOpportunity = () => {
       </div>
 
       {/* Description */}
-      <p className="mt-6 text-zinc-400 leading-relaxed">
+      <p className="mt-6 text-gray-600 leading-relaxed">
         {opportunity.description}
       </p>
 

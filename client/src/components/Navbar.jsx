@@ -22,12 +22,12 @@ const Navbar = () => {
                 <img src={logo} alt="logo" className='w-55 h-45'/>
             </a>
 
-            {/* Desktop Menu */}
+          
             <ul className="hidden sm:flex items-center gap-8">
                 <li className='relative group'>
                     <button className='flex items-center gap-1 cursor-pointer'>Opportunities  <FiChevronDown className="text-lg text-[#ffa843]" /></button>
 
-                     {/* Dropdown Menu */}
+                     
                    <ul className={`opacity-0 invisible group-hover:opacity-100 
                          group-hover:visible duration-300 absolute left-0 mt-2 w-40 rounded-md transition-all ${sticky ? ' bg-white/60 dark:bg-black/60 backdrop-blur-md shadow-md' : 'bg-transparent'} `}  
                          >
@@ -63,4 +63,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar 
