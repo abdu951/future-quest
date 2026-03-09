@@ -1,4 +1,4 @@
-import React from 'react'
+{/*import React from 'react'
 import bgImage from "../assets/oip7.jpg";
 
 const Hero = () => {
@@ -17,4 +17,51 @@ const Hero = () => {
 }
 
 
-export default Hero
+export default Hero */}
+
+
+
+import React from "react";
+import bgImage from "../assets/oip7.jpg";
+
+const Hero = () => {
+  return (
+    <section
+      className="relative min-h-screen flex items-center justify-center text-white"
+      style={{
+        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url(${bgImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="max-w-6xl mx-auto px-6 text-center">
+
+        {/* Heading */}
+        <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
+          Explore the World with{" "}
+          <span className="text-[#ffa843]">Future Quest</span>
+        </h1>
+
+        {/* Subtitle */}
+        <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-200 sm:text-xl">
+          Discover breathtaking destinations, unforgettable adventures,
+          and seamless travel experiences designed for explorers like you.
+        </p>
+
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+          <button className="px-8 py-4 font-semibold rounded-full bg-[#ffa843] hover:bg-[#ff9820] transition duration-300">
+            Book Now
+          </button>
+
+          <button className="px-8 py-4 font-semibold rounded-full border border-white hover:bg-white hover:text-black transition duration-300">
+            Explore Tours
+          </button>
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
