@@ -12,16 +12,13 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-28 px-6 bg-gray-50">
+    <section className="py-28 px-14 bg-gray-50">
       <div className="max-w-7xl mx-auto">
 
         
         <div className="text-center mb-16">
-          <span className="text-[#ffa843] uppercase font-semibold tracking-wider">
-            Contact Us
-          </span>
-          <h2 className="mt-3 text-4xl font-bold text-gray-900">
-            Get in Touch
+          <h2 className="text-4xl font-bold text-gray-900">
+            Get in <span className="text-[#ffa843]">Touch</span>
           </h2>
           <p className="mt-4 text-gray-600 max-w-xl mx-auto">
             Have questions about your next adventure? Our team is here to help

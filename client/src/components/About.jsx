@@ -13,11 +13,8 @@ const About = () => {
         />
 
         <div>
-            <span className="text-[#ffa843] uppercase font-semibold tracking-wider">
-            About us 
-        </span>
-          <h2 className="text-3xl font-bold text-gray-900">
-             Our Agency Story
+          <h2 className="text-4xl font-bold text-gray-900">
+            About Our <span className="text-[#ffa843]">Agency</span>
           </h2>
 
           <p className="mt-4 text-gray-600">
