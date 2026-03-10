@@ -1,8 +1,6 @@
 import React from 'react'
 export default function HeroLayout({ title, spanText, description, bgImage }) {
 
-const [mobileOpen, setMobileOpen] = React.useState(false);
-
     return (
         <div className="pt-40 flex flex-col items-center justify-center px-4 pb-48 text-center text-sm text-white max-md:px-2 bg-cover bg-center h-[400px] rounded-bl-[30vh] relative" style={{ backgroundImage: `linear-gradient(rgba(1, 0, 3, 0.65), rgba(1, 0, 7, 0.65)), url(${bgImage})` }}>
             <div className='pt-30'>
