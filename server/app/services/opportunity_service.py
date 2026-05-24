@@ -15,7 +15,7 @@ class OpportunityService:
 
         category = category.strip().lower()  
 
-        url_adapter = TypeAdapter(HttpUrl)
+        url_adapter = TypeAdapter(HttpUrl)    
 
         try:
             validated_url = url_adapter.validate_python(form_link)
