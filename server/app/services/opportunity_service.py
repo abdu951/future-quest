@@ -13,7 +13,7 @@ class OpportunityService:
     @staticmethod
     async def create_opportunity(db, title, description, country, category, form_link, image):
 
-        category = category.strip().lower()
+        category = category.strip().lower()  
 
         url_adapter = TypeAdapter(HttpUrl)
 
