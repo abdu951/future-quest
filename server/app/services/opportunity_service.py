@@ -128,6 +128,6 @@ class OpportunityService:
         if not opportunity:
             raise HTTPException(404, "Opportunity not found")
 
-        await OpportunityRepository.delete(db, opportunity)
+        await OpportunityRepository.delete(db, opportunity)  
 
         return {"success": True, "message": "Opportunity deleted"}
