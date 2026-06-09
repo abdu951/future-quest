@@ -130,4 +130,4 @@ class OpportunityService:
 
         await OpportunityRepository.delete(db, opportunity)    
 
-        return {"success": True, "message": "Opportunity deleted"}                          
+        return {"success": True, "message": "Opportunity deleted"}                                
